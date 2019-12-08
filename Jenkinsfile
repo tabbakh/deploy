@@ -10,6 +10,10 @@ node {
         credentialsId = 'azure-vm2'
     }
 
+    stage('Clone repository') {
+        checkout scm
+    }    
+
     stage('Deploiement Ansible') {
         ansiblePlaybook(
             playbook: 'playbooks/azure.yaml',
