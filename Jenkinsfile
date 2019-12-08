@@ -15,7 +15,7 @@ node {
             playbook: 'playbooks/azure.yaml',
             inventory: 'inventories/azure.txt',
             credentialsId: credentialsId ,
-            extras: '--extra-vars "short_commit_hash=' + "${params.tag}" +' host='+ host +'"'
+            extras: '--extra-vars "tag=' + "${params.tag}" +' host='+ host +'"'
         )
     }
 }
